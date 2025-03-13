@@ -12,11 +12,12 @@ class Index extends Component
     public $email_educacional;
     public $rm;
     public $ano_escolar;
-    public $senha;
+    
 
     protected $listeners = [
         'abrirModalEdicao',
-        'projetoAtualizar' => "render"
+        'projetoAtualizar' => 'render',
+        'alunoAtualizado' => 'render'
     ];
 
     public function render()
@@ -33,7 +34,7 @@ class Index extends Component
             $this->email_educacional = $aluno->email_educacional;
             $this->rm = $aluno->rm;
             $this->ano_escolar = $aluno->ano_escolar;
-            $this->senha = $aluno->senha;
+            
         }
     }
 

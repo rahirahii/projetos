@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alunos', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 80)->nullable(false);
-            $table->string('email_educacional', 80)->nullable(false);
-            $table->integer('rm')->nullable(false);
-            $table->string('ano_escolar')->nullable(false);
-            $table->string('role')->default('aluno');
-            
             $table->timestamps();
         });
     }
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alunos');
+        Schema::dropIfExists('admins');
     }
 };

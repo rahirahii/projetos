@@ -9,6 +9,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    const ROLE_ADMIN = 'admin';
+    const ROLE_USER = 'user';
+    const ROLE_PROFESSOR = 'professor';
+
     use HasFactory, Notifiable;
 
     /**
@@ -20,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -43,5 +48,20 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function isAdmin()
+    {
+        return $this->role == self::ROLE_ADMIN;
+    }
+
+    public function isUser()
+    {
+        return $this->role == self::ROLE_USER;
+    }
+
+    public function isTeacher()
+    {
+        return $this->role == self::ROLE_PROFESSOR;
     }
 }

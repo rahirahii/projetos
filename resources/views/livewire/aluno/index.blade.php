@@ -9,7 +9,7 @@
                         <th>Email</th>
                         <th>rm</th>
                         <th>Série</th>
-                        <th>Senha</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -20,7 +20,7 @@
                             <td>{{ $t->email_educacional }}</td>
                             <td>{{ $t->rm }}</td>
                             <td>{{ $t->ano_escolar }}</td>
-                            <td>{{ $t->senha }}</td>
+                            
                             <td>
                                 <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewModal"
                                     wire:click="abrirModalVizualizar({{ $t->id }})">Visualizar</button>
@@ -76,7 +76,7 @@
                     </p>
                     <p><strong>RM:</strong>{{ $rm }}</p>
                     <p><strong>Série:</strong>{{ $ano_escolar }}</p>
-                    <p><strong>Senha:</strong>{{ $senha }}</p>
+                    
                 </div>
 
                 <div class="modal-footer">

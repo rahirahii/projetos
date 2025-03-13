@@ -11,7 +11,7 @@ class Create extends Component
     public $email_educacional;
     public $rm;
     public $ano_escolar;
-    public $senha;
+    
 
     public function render()
     {
@@ -25,9 +25,9 @@ class Create extends Component
             'email_educacional' => $this->email_educacional,
             'rm' => $this->rm,
             'ano_escolar' => $this->ano_escolar,
-            'senha' => $this->senha
+            
         ]);
 
-        session()->flash('success, Cadastro realizado');
+        session()->flash('success', 'Cadastro realizado');
     }
 }

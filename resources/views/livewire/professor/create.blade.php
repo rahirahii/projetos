@@ -1,5 +1,5 @@
 <div class="mt-5">
-
+   
     @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{session('success')}}
@@ -8,7 +8,7 @@
     @endif
 
     <div class="card">
-        <h5 class="card-header">Cadastro de Alunos</h5>
+        <h5 class="card-header">Cadastro de Professor</h5>
         <div class="card-body">
             <form wire:submit.prevent="store">
                 <div class="bg-light py-3 py-md-5">
@@ -28,37 +28,27 @@
                                                 placeholder="Nome Completo" wire:model.defer="nome">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="email_educacional" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email_educacional"
-                                                name="email_educacional" placeholder="Email Educacional"
-                                                wire:model.defer="email_educacional">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email"
+                                                name="email" placeholder="Email"
+                                                wire:model.defer="email">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="ano_escolar" class="serie">Série Escolar</label>
-                                            <select class="form-select" aria-label="Default select example" wire:model="ano_escolar">
-                                                <option selected  >Escolha uma opção</option>
-                                                <option value="1° EF">1° ano EF</option>
-                                                <option value="2° EF">2° ano EF</option>
-                                                <option value="3° EF">3° ano EF</option>
-                                                <option value="4° EF">4° ano EF</option>
-                                                <option value="5° EF">5° ano EF</option>
-                                                <option value="6° EF">6° ano EF</option>
-                                                <option value="7° EF">7° ano EF</option>
-                                                <option value="8° EF">8° ano EF</option>
-                                                <option value="9° EF">9° ano EF</option>
-                                                <option value="1° EM">1° ano EM</option>
-                                                <option value="2° EM">2° ano EM</option>
-                                                <option value="3° EM">3° ano EM</option>
-                                                
-                                              </select>
+                                            <label for="materia_dominante" class="form-label">Matéria Dominante</label>
+                                            <select class="form-select" aria-label="Default select example" 
+                                            wire:model.defer="materia_dominante">
+                                            
+                                                <option selected>Escolha uma opção</option>
+                                                <option value="1">Matemática</option>
+                                                <option value="2">Português</option>
+                                            </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="rm" class="form-label">RM </label>
+                                            <label for="rm" class="form-label">nif</label>
                                             <input type="integer" class="form-control" id="rm" name="rm"
                                                 placeholder="0000" wire:model.defer="rm">
                                         </div>
                                         
-                                       
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value=""
                                                 name="rememberMe" id="rememberMe">

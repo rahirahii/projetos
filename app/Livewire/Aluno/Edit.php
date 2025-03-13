@@ -12,11 +12,11 @@ class Edit extends Component
     public $email_educacional;
     public $rm;
     public $ano_escolar;
-    public $senha;
+
 
     protected $listeners = [
         'editarAluno',
-        'closeEditModal' => "fecharModal"
+        'closeEditModal' => 'fecharModal'
     ];
 
     public function fecharModal()
@@ -33,13 +33,14 @@ class Edit extends Component
                 'email_educacional' => $this->email_educacional,
                 'rm' => $this->rm,
                 'ano_escolar' => $this->ano_escolar,
-                'senha' => $this->senha
-            ]);
-        }
 
-        $this->dispatch('alunoAtualizado');
-        $this->dispatch('fecharModalEdicao');
-        session()->flash('message', 'Aluno Atualizado');
+            ]);
+
+
+            $this->dispatch('alunoAtualizado');
+            $this->dispatch('fecharModalEdicao');
+            session()->flash('message', 'Aluno Atualizado');
+        }
     }
 
     public function render()
@@ -56,7 +57,7 @@ class Edit extends Component
             $this->email_educacional = $aluno->email_educacional;
             $this->rm = $aluno->rm;
             $this->ano_escolar = $aluno->ano_escolar;
-            $this->senha = $aluno->senha;
+
 
             $this->dispatch('openEditModal');
         }

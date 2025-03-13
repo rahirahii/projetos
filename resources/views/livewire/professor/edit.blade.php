@@ -1,6 +1,6 @@
 <div>
     <div wire:ignore.self class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
-    aria-hidden="true" wire:Listener="hideModal">
+    aria-hidden="true" wire:listener="hideModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

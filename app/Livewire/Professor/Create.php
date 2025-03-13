@@ -23,7 +23,7 @@ class Create extends Component
     {
         Professor::create([
             'nome' => $this->nome,
-            'email_' => $this->email,
+            'email' => $this->email,
             'nif' => $this->nif,
             'materia_dominante' => $this->materia_dominante,
             

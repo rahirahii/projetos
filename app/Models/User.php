@@ -10,8 +10,8 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     const ROLE_ADMIN = 'admin';
-    const ROLE_USER = 'user';
     const ROLE_PROFESSOR = 'professor';
+    const ROLE_ALUNO = 'aluno';
 
     use HasFactory, Notifiable;
 
@@ -55,13 +55,14 @@ class User extends Authenticatable
         return $this->role == self::ROLE_ADMIN;
     }
 
-    public function isUser()
-    {
-        return $this->role == self::ROLE_USER;
-    }
 
     public function isTeacher()
     {
         return $this->role == self::ROLE_PROFESSOR;
+    }
+
+    public function isStudent()
+    {
+        return $this->role == self::ROLE_ALUNO;
     }
 }

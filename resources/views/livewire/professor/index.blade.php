@@ -4,7 +4,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Professor</th>
                         <th>Nome</th>
                         <th>Email</th>
                         <th>NIF</th>
@@ -13,7 +13,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($aluno as $t)
+                    @foreach ($professor as $t)
                         <tr>
                             <td>{{ $t->id }}</td>
                             <td>{{ $t->nome }}</td>
@@ -36,7 +36,8 @@
                     @endforeach
                 </tbody>
             </table>
-            <livewire:aluno.edit>
+            <livewire:professor.edit>
+            
 
 
         </div>

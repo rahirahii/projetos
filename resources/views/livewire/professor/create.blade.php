@@ -39,14 +39,14 @@
                                             wire:model.defer="materia_dominante">
                                             
                                                 <option selected>Escolha uma opção</option>
-                                                <option value="1">Matemática</option>
-                                                <option value="2">Português</option>
+                                                <option value="Matemática">Matemática</option>
+                                                <option value="Português">Português</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="rm" class="form-label">nif</label>
-                                            <input type="integer" class="form-control" id="rm" name="rm"
-                                                placeholder="0000" wire:model.defer="rm">
+                                            <label for="nif" class="form-label">nif</label>
+                                            <input type="integer" class="form-control" id="nif" name="nif"
+                                                placeholder="0000" wire:model.defer="nif">
                                         </div>
                                         
                                         <div class="form-check">

@@ -32,12 +32,12 @@ class Login extends Component
         'password' => $this->password])) { //vai verificar se a tentativa de login foi um sucesso
             session()->regenerate();
             
-            if(Auth::user()->role === 'adimin'){
+            if(Auth::user()->role === 'admin'){
                 return redirect()->route('admin.dashboard');
             }
     
-            if(Auth::user()->role === 'user'){
-                return redirect()->route('user.dashboard');
+            if(Auth::user()->role === 'aluno'){
+                return redirect()->route('aluno.dashboard');
             }
     
             if(Auth::user()->role === 'professor'){

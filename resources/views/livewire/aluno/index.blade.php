@@ -4,7 +4,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Aluno</th>
                         <th>Nome</th>
                         <th>Email</th>
                         <th>rm</th>

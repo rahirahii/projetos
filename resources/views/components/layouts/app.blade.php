@@ -10,10 +10,10 @@
     @livewireStyles
 </head>
 
-<body style="background-color: rgb(251, 251, 236)">
-    <nav class="navbar border-bottom border-body" style="background-color: rgb(100, 158, 220)">
+<body style="background-color: rgb(202, 243, 246)">
+    <nav class="navbar border-bottom border-body" style="background-color: rgb(112, 180, 253)">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Smart Study</a> --
+            <a class="navbar-brand" href="#">Smart Study</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -35,6 +35,11 @@
                                                     name="email" placeholder="Email"
                                                     wire:model.defer="email">
                                             </div>
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Senha </label>
+                                                <input type="integer" class="form-control" id="password" name="password"
+                                                    placeholder="Digite sua senha" wire:model.defer="password">
+                                            </div>
                                             
 
                                             <div class="form-check">

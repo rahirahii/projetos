@@ -9,7 +9,7 @@
 
     <div class="card">
        
-            <h5 class="card-header">Cadastro de Alunos</h5>
+            <h5 class="card-header" style="background-color: rbg(208, 239,255)">Cadastro de Alunos</h5>
             <div class="card-body">
                 <form wire:submit.prevent="store">
                     <div class="bg-light py-3 py-md-5">
@@ -59,6 +59,12 @@
                                                 <label for="rm" class="form-label">RM </label>
                                                 <input type="integer" class="form-control" id="rm" name="rm"
                                                     placeholder="0000" wire:model.defer="rm">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Senha </label>
+                                                <input type="integer" class="form-control" id="password" name="password"
+                                                    placeholder="Digite sua senha" wire:model.defer="password">
                                             </div>
 
 

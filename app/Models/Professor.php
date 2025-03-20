@@ -9,8 +9,6 @@ class Professor extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nome',
-        'email',
         'nif',
         'materia_dominante'
         

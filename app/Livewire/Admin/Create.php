@@ -3,6 +3,7 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Admin;
+use App\Models\User;
 use Livewire\Component;
 
 class Create extends Component
@@ -11,6 +12,7 @@ class Create extends Component
     
     public $nome;
     public $email;
+    public $password;
     
     
 
@@ -21,6 +23,14 @@ class Create extends Component
 
     public function store()
     {
+        $user = User::create([
+            'name'=>$this->nome,
+            'email'=>$this->email,
+            'password'=>$this->password,
+            'role'=> 'professor'
+        ]);
+
+
         Admin::create([
             'nome' => $this->nome,
             'email' => $this->email

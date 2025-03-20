@@ -48,6 +48,12 @@
                                             <input type="integer" class="form-control" id="nif" name="nif"
                                                 placeholder="0000" wire:model.defer="nif">
                                         </div>
+
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Senha </label>
+                                            <input type="integer" class="form-control" id="password" name="password"
+                                                placeholder="Digite sua senha" wire:model.defer="password">
+                                        </div>
                                         
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value=""

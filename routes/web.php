@@ -4,9 +4,7 @@ use App\Livewire\Admin\Create as AdminCreate;
 use App\Livewire\Admin\Index as AdminIndex;
 use App\Livewire\Aluno\Create;
 use App\Livewire\Aluno\Dashboard\Dashboard;
-use App\Livewire\Aluno\Dashboard\Edit;
-use App\Livewire\Aluno\Edit as AlunoEdit;
-use App\Livewire\Aluno\Editar;
+use App\Livewire\Aluno\Edit;
 use App\Livewire\Aluno\Index;
 use App\Livewire\Auth\Login;
 use App\Livewire\Professor\Create as ProfessorCreate;
@@ -23,7 +21,7 @@ Route::get('/admin', function(){
 })->middleware('auth', 'role:admin')->name('admin.dashboard');
 
 Route::get('/aluno/dashboard', Dashboard::class)->middleware('auth', 'role:aluno')->name('aluno.dashboard');
-Route::get('editar', Editar::class)->middleware(['auth', 'role:aluno'])->name('aluno.editar');
+Route::get('editar', Edit::class)->middleware(['auth', 'role:aluno'])->name('aluno.edit');
 
 
 
